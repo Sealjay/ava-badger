@@ -6,7 +6,7 @@ import pngdec
 WIDTH = 296  # Badger2040 screen width
 HEIGHT = 128  # Badger2040 screen height
 RUNNING = True
-REFRESH_RATE = 2.0
+REFRESH_RATE = 1.0
 WAVE_AMPLITUDE = 25
 WAVE_FREQUENCY = 0.006
 WAVE_SPEED = 1.0
@@ -16,6 +16,9 @@ WAVE_THICKNESS = 8
 LEFT_PADDING = 5
 NAME_HEIGHT = 35  # Reduced from 50 to bring last name higher
 DETAILS_HEIGHT = 18
+
+# Update speed
+UDPATE_SPEED_AFTER_FIRST_REFRESH = 3 # There are currently four constants naming the different update speeds from 0 to 3
 
 # Badge text
 FIRST_NAME = "Chris"
@@ -144,3 +147,4 @@ while True:
         draw_waves(time_offset)
         time_offset += WAVE_SPEED * REFRESH_RATE
         time.sleep(REFRESH_RATE)
+        badger.set_update_speed(UDPATE_SPEED_AFTER_FIRST_REFRESH)
