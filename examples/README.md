@@ -7,15 +7,28 @@ Note that while each example app is in its own directory, all of the files for e
 ## Avanade
 A dynamic name badge featuring animated sine waves and the Avanade logo. The waves become more dramatic from left to right, creating an engaging visual effect behind your name and title.
 
+How to set up:
+1. Copy the `avanade.py` file to the `/examples/` directory on your badge.
+2. Copy the `icon-avanade.jpg` file to the `/examples/` directory on your badge.
+3. Copy the `avaBwSolid64.png` file to the `/badges/` directory on your badge.
+4. Customize the `FIRST_NAME`, `LAST_NAME`, and `JOB_TITLE` constants at the top of the `avanade.py` file.
+5. Adjust wave parameters like `WAVE_AMPLITUDE`, `WAVE_FREQUENCY`, `UDPATE_SPEED_AFTER_FIRST_REFRESH` and `WAVE_THICKNESS` to change the animation style
+
 How to use:
 - B: Pause/Resume the animation
 - UP: Decrease refresh rate (makes animation smoother)
 - DOWN: Increase refresh rate (reduces battery usage)
 
-To customize:
-1. Edit the `FIRST_NAME`, `LAST_NAME`, and `JOB_TITLE` constants at the top of the file
-2. Place your logo as `avaBwSolid64.png` (64x64 pixels) in the `/badges/` directory
-3. Adjust wave parameters like `WAVE_AMPLITUDE`, `WAVE_FREQUENCY`, and `WAVE_THICKNESS` to change the animation style
+### Known issues and workaround
+There is an issue listed on the [Badger 2040 GitHub readme](https://github.com/badger/home/blob/main/tutorial.md#app-doesnt-load-correctly-after-selecting-button) that means sometimes the device app launcher will fail after selecting a button. One workaround is to edit `main.py` to import the `avanade.py` file instead of opening via the launcher.
+
+Like so:
+```python
+#import launcher  # noqa F401
+import avanade
+```
+
+For this to work, `avanade.py` must be in the root directory, not under `/examples/`.
 
 ## Badge++
 Just like the badge app that came with your Badger 2350, but with a few extra features to make sure your badge is truly one of a kind.

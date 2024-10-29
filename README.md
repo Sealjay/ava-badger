@@ -1,4 +1,11 @@
 # Let's get Hacking!
+> This repository is a fork of the GitHub Universe 2024 Badger repository. The original README is below. This fork is intended to be a place to store a custom badge variant containing the Avanade waves.
+
+Full setup instructions are in the [examples readme file](examples/README.md).
+
+![The Avanade waves on a device](images/waves.gif)
+
+## Original Readme
 
 Hello 👋 - if you've landed at this repo it's probably because you are one of the lucky people at GitHub Universe 2024 who has been handed a hackable conference badge and you are now wondering what the heck this thing is and how you can get started.
 
