@@ -4,6 +4,19 @@ This directory contains example apps that demonstrate how to interact with the `
 
 Note that while each example app is in its own directory, all of the files for each app will need to be copied directly into the `/examples/` directory to correctly show up as an app in the launcher menu.
 
+## Avanade
+A dynamic name badge featuring animated sine waves and the Avanade logo. The waves become more dramatic from left to right, creating an engaging visual effect behind your name and title.
+
+How to use:
+- B: Pause/Resume the animation
+- UP: Decrease refresh rate (makes animation smoother)
+- DOWN: Increase refresh rate (reduces battery usage)
+
+To customize:
+1. Edit the `FIRST_NAME`, `LAST_NAME`, and `JOB_TITLE` constants at the top of the file
+2. Place your logo as `avaBwSolid64.png` (64x64 pixels) in the `/badges/` directory
+3. Adjust wave parameters like `WAVE_AMPLITUDE`, `WAVE_FREQUENCY`, and `WAVE_THICKNESS` to change the animation style
+
 ## Badge++
 Just like the badge app that came with your Badger 2350, but with a few extra features to make sure your badge is truly one of a kind.
 
